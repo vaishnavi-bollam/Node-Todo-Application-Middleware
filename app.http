@@ -1,0 +1,87 @@
+### get todo status 
+### GET status
+### GET API 1 scenario 1:
+GET http://localhost:3000/todos/?status=TO%20D0
+
+### GET priority 
+GET http://localhost:3000/todos/?priority=HIGH
+
+### GET status and prioroty
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+### GET search_q
+GET http://localhost:3000/todos/?search_q=Buy
+
+### GET status and category
+GET http://localhost:3000/todos/?category=WORK&status=DONE
+
+### GET category 
+GET http://localhost:3000/todos/?category=HOME
+
+### GET category and priority
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+
+
+
+###API 2
+GET http://localhost:3000/todos/6/
+
+### API 3 
+GET http://localhost:3000/agenda/?date=2021-2-22
+
+### API 4
+POST http://localhost:3000/todos/ 
+Content-Type: application/json
+
+{
+  "id": 9,
+  "todo": "Finalize event theme",
+  "priority": "HIGH",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2021-02-22"
+}
+
+### API 5 scenario 1:
+PUT http://localhost:3000/todos/7/
+Content-Type: application/json
+
+{
+    "status": "TO DO"
+}
+
+### API 5 scenario 2:
+PUT http://localhost:3000/todos/5/
+Content-Type: application/json
+
+    {
+      "priority": "LOW"
+    }
+
+### API 5 scenario 3:
+PUT http://localhost:3000/todos/6/
+Content-Type: application/json
+
+    {
+      "todo": "Clean the garden"
+    }
+
+### API 5 scenario 4:
+PUT http://localhost:3000/todos/5/
+Content-Type: application/json
+
+    {
+      "category": "LEARNINGs"
+    }
+
+### API 5 scenario 5:
+PUT http://localhost:3000/todos/5/
+Content-Type: application/json
+
+     {
+      "dueDate": "2021-11-12"
+    }
+
+### API 6:
+DELETE http://localhost:3000/todos/8/
